@@ -1,22 +1,72 @@
-.container {
+:root {
+    --background-color: #4f4e57b3;
+    --hover-color: white;
+    --text-color: rgb(19, 19, 20);
+    --themeiconhover-color: #5c5b5be0;
+    --themeiconbackground-color: #4b4b4bdd;
+
+}
+
+.light {
+    --background-color: white;
+    --hover-color: rgb(129, 1, 164);
+    --text-color: black;
+    --themeiconhover-color: #e8e6e6;
+    --themeiconbackground-color: #cdcdcddd;
+
+}
+/* Theme button */
+.theme_btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--themeiconbackground-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.315);
+}
+
+.theme_btn:hover {
+    background-color: var(--themeiconhover-color);
+}
+
+.theme_btn:active {
+    transform: translateY(-2.5px);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     flex-flow: column nowrap;
+    margin-top: 5px;
 }
 
 body {
-    background-color: #2a2b33db;
-    margin: 0; 
+    background-color: var(--background-color);
+    margin: 0;
 }
 
-h1, h2 {
-    color: rgb(19, 19, 20);
-    transition: color 0.3s ease;
-    text-align: center; 
+.heading h1 {
+    font-size: 3rem;
 }
-h1:hover, h2:hover{
-    color: white;
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+h1:hover {
+    color: var(--hover-color);
     transform: translateY(-1.5px);
 }

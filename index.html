@@ -5,14 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="favicon icon" id="favicon" href="images/dark/favicon_dark.ico">
     <title>Ramlakhan</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Hi Ramlakhan here !!</h1>
-        <h2>Coming Soon</h2>
+    <div class="theme_btn">
+        <img id="theme_icon" src="images/dark/theme_dark.svg" alt="">
     </div>
+    <section>
+        <div class="container heading">
+            <a href="index.html">
+                <h1>Ramlakhan Madheshiya</h1>
+            </a>
+        </div>
+    </section>
+    <script>
+        const themeBtn = document.querySelector('.theme_btn');
+        const body = document.body;
+        const favicon = document.getElementById('favicon');
+        const themeIcon = document.getElementById('theme_icon');
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light');
+
+            if (body.classList.contains('light')) {
+                favicon.href = 'images/light/favicon_light.ico';
+                themeIcon.src = 'images/light/theme_light.svg';
+            } else {
+                favicon.href = 'images/dark/favicon_dark.ico';
+                themeIcon.src = 'images/dark/theme_dark.svg';
+            }
+            // function light_theme()
+        });
+
+
+    </script>
 </body>
 
 </html>
