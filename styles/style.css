@@ -9,8 +9,8 @@
 
 .light {
     --background-color: white;
-    --hover-color: rgb(129, 1, 164);
-    --text-color: black;
+    --hover-color: black;
+    --text-color: #444446;
     --themeiconhover-color: #e8e6e6;
     --themeiconbackground-color: #cdcdcddd;
 
